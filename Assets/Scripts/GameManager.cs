@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public Toolbar toolbar;
     public GameObject world;
+    public static GameManager Instance { get; private set; }
 
     private bool m_isSimulating;
     public bool IsSimulating 
@@ -22,9 +24,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (Instance)
+            Destroy(Instance);
+        Instance = this;
         toolbar.world = world;
     }
 
-
-
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

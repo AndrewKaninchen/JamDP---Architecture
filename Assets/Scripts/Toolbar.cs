@@ -10,16 +10,9 @@ public class Toolbar : MonoBehaviour
 
     public GameObject partButtonPrefab;
     public HorizontalLayoutGroup horizontalLayoutGroup;
-    //public Dictionary<Part, GameObject> partButtons;
-    //private List<Part> availableParts;
-    public List<GameObject> initiallyAvailablePartsPrefabs;
-
-
 
     private void Start()
     {
-        foreach (var p in initiallyAvailablePartsPrefabs)
-            AddPart(p);
     }
 
     public void AddPart(GameObject partPrefab)
@@ -28,17 +21,8 @@ public class Toolbar : MonoBehaviour
         buttonInstance.SetActive(true);
         var partButtonController = buttonInstance.GetComponent<PartButtonController>();
         partButtonController.PrepareButton(partPrefab.GetComponent<Part>(), this);
-        //availableParts.Add();
     }
-
-	//public void RemovePart(Part part)
- //   {
- //       //availableParts.Remove(part);
- //       //var button = partButtons[part];
- //       //partButtons.Remove(part);
- //       Destroy(button);
- //   }
-
+    
     public void PreviewPart (Part partPrefab, GameObject button)
     {
         var instance = Instantiate(partPrefab.prefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity, world.transform);
@@ -46,7 +30,7 @@ public class Toolbar : MonoBehaviour
         partInstance.enabled = false;
         partInstance.OnSpawn += () =>
         {
-            //RemovePart(partInstance);
+            // Lidar com múltiplas instâncias do mesmo tipo
             Destroy(button);
         };
         instance.AddComponent<PartPreview>();
