@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114938216191798784}
   - component: {fileID: 60012144577600440}
   m_Layer: 0
-  m_Name: Part_SimpleBlock 12
+  m_Name: Pedregulho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

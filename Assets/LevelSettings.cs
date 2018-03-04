@@ -14,8 +14,10 @@ public class LevelSettings : MonoBehaviour
     [System.Serializable]
     public struct WinCondition
     {
-        public float height;
-        public bool useHeight;
+        public WinArea targetArea;
+        public float timeRequired;
+        //public float height;
+        //public bool useHeight;
     }
 
     public List<InitiallyAvailablePart> initiallyAvailableParts;
@@ -31,5 +33,7 @@ public class LevelSettings : MonoBehaviour
                 gameManager.toolbar.AddPart(p.prefab);
             }
         }
+
+        winCondition.targetArea.Init(winCondition.timeRequired, gameManager);
     }
 }

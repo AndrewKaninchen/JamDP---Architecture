@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject world;
     public static GameManager Instance { get; private set; }
 
+    public Toggle toggle;
+
     private bool m_isSimulating;
     public bool IsSimulating 
     {
@@ -20,6 +22,19 @@ public class GameManager : MonoBehaviour
     public void ToggleSimulation()
     {
         IsSimulating = !IsSimulating;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            var selected = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+            if (selected == toggle.gameObject)
+                UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+            else
+                toggle.isOn = !toggle.isOn;
+            
+        }
     }
 
     private void Start()
@@ -33,5 +48,10 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void WinDeGueime()
+    {
+        Debug.Log("Boa porra");
     }
 }

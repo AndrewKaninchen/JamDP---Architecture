@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212252111575005880}
   - component: {fileID: 50517461379838280}
   - component: {fileID: 114938216191798784}
-  - component: {fileID: 60952612876286760}
+  - component: {fileID: 60308451257001956}
   m_Layer: 0
   m_Name: Torre alta
   m_TagString: Untagged
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60952612876286760
+--- !u!60 &60308451257001956
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

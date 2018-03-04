@@ -17,6 +17,9 @@ public class PartPreview : MonoBehaviour
     private static Color invalidPositionColor = new Color(1f, 0f, 0f, .5f);
 
 
+    private float amountOfContacts;
+
+
     void Start ()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -28,13 +31,38 @@ public class PartPreview : MonoBehaviour
         sr.color = previewColor;
         if (rb) rb.isKinematic = true;
         foreach (var col in cols)
-            col.isTrigger = true; 
+            col.isTrigger = true;
+
+
+        gameObject.layer = LayerMask.NameToLayer("PreviewPart");
     }
 
 	void Update ()
     {
+        amountOfContacts = 0;
+        foreach (var c in cols)
+        {
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.SetLayerMask(LayerMask.GetMask("Default"));
+            var res = new Collider2D[10];
+            amountOfContacts += c.OverlapCollider(filter, res);
+        }
+        
+
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3 (0f, 0f, 10f);
         
+        if (amountOfContacts > 0)
+        {
+            validPosition = false;
+            sr.color = invalidPositionColor;
+            return;
+        }
+        else
+        {
+            validPosition = true;
+            sr.color = previewColor;
+        }
+
         if (!hasSpawned && validPosition && Input.GetMouseButtonDown(0))
         {
             hasSpawned = true;
@@ -49,24 +77,13 @@ public class PartPreview : MonoBehaviour
         }
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        print(collision);
-        validPosition = false;
-        sr.color = invalidPositionColor;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        validPosition = true;
-        sr.color = previewColor;
-    }
-
     private void OnDestroy()
     {
         sr.color = originalColor;
         if (rb) rb.isKinematic = false;
         foreach (var col in cols)
             col.isTrigger = false;
+
+        gameObject.layer = LayerMask.NameToLayer("Default");
     }
 }
