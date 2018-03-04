@@ -16,9 +16,9 @@ public class MouseScroll : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 ruaScreen = Camera.main.WorldToScreenPoint(GameObject.Find("Rua").transform.position);
-        
+        Vector3 ceuScreen = Camera.main.WorldToScreenPoint(GameObject.Find("Ceu").transform.position);
 
-        if(Input.mousePosition.y > Screen.height - mdelta)
+        if(Input.mousePosition.y > Screen.height - mdelta && ceuScreen.y > Screen.height)
         {
             transform.position += direction * Time.deltaTime * mspeed;
         }
