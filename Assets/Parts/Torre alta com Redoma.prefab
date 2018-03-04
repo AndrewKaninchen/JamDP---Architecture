@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58910939574371570}
   - component: {fileID: 61160959254020536}
   m_Layer: 0
-  m_Name: Part_SimpleBlock 8
+  m_Name: Torre alta com Redoma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
