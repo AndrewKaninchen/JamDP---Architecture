@@ -7,9 +7,10 @@ public class PartPreview : MonoBehaviour
     public SpriteRenderer sr;
     public Part part;
     public Rigidbody2D rb;
-    public Collider2D col;
+    public Collider2D[] cols;
 
     private bool validPosition = true;
+    private bool hasSpawned = false;
 
     public Color originalColor;
     private static Color previewColor = new Color(1f, 1f, 1f, .5f);
@@ -20,24 +21,26 @@ public class PartPreview : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
+        cols = GetComponents<Collider2D>();
 
         part = GetComponent<Part>();
         originalColor = sr.color;
         sr.color = previewColor;
         if (rb) rb.isKinematic = true;
-        if (col) col.isTrigger = true;
+        foreach (var col in cols)
+            col.isTrigger = true; 
     }
 
 	void Update ()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3 (0f, 0f, 10f);
         
-        if (validPosition && Input.GetMouseButtonDown(0))
+        if (!hasSpawned && validPosition && Input.GetMouseButtonDown(0))
         {
+            hasSpawned = true;
             part.enabled = true;
-            Destroy(this);
             part.Spawn();
+            Destroy(this);
         }
 	}
 
@@ -58,6 +61,7 @@ public class PartPreview : MonoBehaviour
     {
         sr.color = originalColor;
         if (rb) rb.isKinematic = false;
-        if (col) col.isTrigger = false;
+        foreach (var col in cols)
+            col.isTrigger = false;
     }
 }
