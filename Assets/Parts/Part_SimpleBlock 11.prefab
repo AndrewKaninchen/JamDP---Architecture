@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4425864677889206}
   - component: {fileID: 212252111575005880}
-  - component: {fileID: 61762736090287508}
   - component: {fileID: 50517461379838280}
   - component: {fileID: 114938216191798784}
+  - component: {fileID: 60176808344106020}
   m_Layer: 0
   m_Name: Part_SimpleBlock 11
   m_TagString: Untagged
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61762736090287508
-BoxCollider2D:
+--- !u!60 &60176808344106020
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -79,15 +79,76 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 9.7, y: 2.24}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.85, y: -0.29999998}
+      - {x: 4.8199997, y: -0.17}
+      - {x: 4.79, y: -0.14}
+      - {x: 4.71, y: -0.13}
+      - {x: 4.31, y: -0.11}
+      - {x: 4.21, y: -0.08}
+      - {x: 3.85, y: -0.08}
+      - {x: 3.52, y: -0.089999996}
+      - {x: 3.34, y: -0.13}
+      - {x: 3.28, y: -0.06}
+      - {x: 3.26, y: -0.04}
+      - {x: 3.02, y: 0.17999999}
+      - {x: 3.04, y: 0.28}
+      - {x: 2.78, y: 0.51}
+      - {x: 2.52, y: 0.75}
+      - {x: 2.3, y: 0.98999995}
+      - {x: 2.19, y: 1.12}
+      - {x: -2.3899999, y: 1.12}
+      - {x: -2.55, y: 1.06}
+      - {x: -2.6799998, y: 1.09}
+      - {x: -3.09, y: 0.76}
+      - {x: -3.1799998, y: 0.68}
+      - {x: -3.46, y: 0.39999998}
+      - {x: -3.6399999, y: 0.17}
+      - {x: -3.84, y: -0.03}
+      - {x: -3.8999999, y: -0.12}
+      - {x: -4.0299997, y: -0.11}
+      - {x: -4.22, y: -0.14999999}
+      - {x: -4.45, y: -0.16}
+      - {x: -4.79, y: -0.14999999}
+      - {x: -4.81, y: -0.17999999}
+      - {x: -4.85, y: -0.31}
+      - {x: -4.85, y: -0.5}
+      - {x: -4.83, y: -0.65}
+      - {x: -4.8199997, y: -1.12}
+      - {x: 4.8199997, y: -1.12}
+      - {x: 4.8199997, y: -0.71999997}
+      - {x: 4.8399997, y: -0.65}
+      - {x: 4.85, y: -0.59}
+    - - {x: 4.0499997, y: -0.19999999}
+      - {x: 4.0299997, y: -0.17999999}
+      - {x: 4.12, y: -0.17999999}
+    - - {x: 3.4199998, y: -0.21}
+      - {x: 3.4399998, y: -0.21}
+      - {x: 3.4199998, y: -0.19999999}
+    - - {x: 2.96, y: 0.83}
+      - {x: 2.96, y: 0.79999995}
+      - {x: 2.97, y: 0.74}
+      - {x: 3.04, y: 0.7}
+      - {x: 3.07, y: 0.71999997}
+      - {x: 3.06, y: 0.78}
+      - {x: 3, y: 0.83}
+    - - {x: -4.7999997, y: 1.0699999}
+      - {x: -4.77, y: 1.0799999}
+      - {x: -4.77, y: 1.11}
+      - {x: -4.7999997, y: 1.12}
+      - {x: -4.8199997, y: 1.1}
+    - - {x: 4.79, y: 1.0699999}
+      - {x: 4.8199997, y: 1.0799999}
+      - {x: 4.8199997, y: 1.11}
+      - {x: 4.79, y: 1.12}
+      - {x: 4.77, y: 1.1}
 --- !u!114 &114938216191798784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1955149229709414}
-  previewImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  previewImage: {fileID: 21300000, guid: 47a744aafd11ae749a0cd2c4ac92c297, type: 3}
 --- !u!212 &212252111575005880
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -135,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 507a8b3dcd6bdd244b260a2c6838075e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47a744aafd11ae749a0cd2c4ac92c297, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

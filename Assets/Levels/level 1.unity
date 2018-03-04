@@ -526,9 +526,11 @@ MonoBehaviour:
   partButtonPrefab: {fileID: 155996884}
   horizontalLayoutGroup: {fileID: 613374627}
   initiallyAvailablePartsPrefabs:
-  - {fileID: 1955149229709414, guid: fa717a43cf5d44c468d7736a3661361f, type: 2}
-  - {fileID: 1955149229709414, guid: fa717a43cf5d44c468d7736a3661361f, type: 2}
-  - {fileID: 1955149229709414, guid: 5cf419d907970734c8af21cecc1a5c33, type: 2}
+  - {fileID: 1955149229709414, guid: fb6099aac735dac48899dfad609b2b37, type: 2}
+  - {fileID: 1955149229709414, guid: fb6099aac735dac48899dfad609b2b37, type: 2}
+  - {fileID: 1955149229709414, guid: 5ead727cfe670984cb167aee3679b582, type: 2}
+  - {fileID: 1955149229709414, guid: bf6fbf11075c164499224115cdc7c9f7, type: 2}
+  - {fileID: 1955149229709414, guid: f4987b64ae05ec94d81aac5dda0ad9b6, type: 2}
 --- !u!1 &924383156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,8 +1021,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2085218685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.924725, y: -5.8561563, z: 10.264884}
-  m_LocalScale: {x: 17.200005, y: 1, z: 1}
+  m_LocalPosition: {x: 17.924725, y: -10.09, z: 10.264884}
+  m_LocalScale: {x: 42.7, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190250803}
   m_RootOrder: 0
