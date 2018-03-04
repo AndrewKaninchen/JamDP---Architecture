@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject world;
     public static GameManager Instance { get; private set; }
 
+    public Toggle toggle;
+
     private bool m_isSimulating;
     public bool IsSimulating 
     {
@@ -20,6 +22,14 @@ public class GameManager : MonoBehaviour
     public void ToggleSimulation()
     {
         IsSimulating = !IsSimulating;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            toggle.isOn = !toggle.isOn;
+        }
     }
 
     private void Start()

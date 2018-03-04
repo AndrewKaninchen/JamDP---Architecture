@@ -328,8 +328,8 @@ MonoBehaviour:
   - prefab: {fileID: 1955149229709414, guid: d272a492269b8414e90e6262a7a9c521, type: 2}
     amount: 3
   winCondition:
-    height: 0
-    useHeight: 0
+    targetArea: {fileID: 0}
+    timeRequired: 0
   gameManager: {fileID: 1772668149}
 --- !u!4 &329104484
 Transform:
