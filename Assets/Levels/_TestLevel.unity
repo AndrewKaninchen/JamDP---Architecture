@@ -318,18 +318,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c457f627c1305b4c9ff44367aea5995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initiallyAvailableParts:
-  - prefab: {fileID: 1955149229709414, guid: d272a492269b8414e90e6262a7a9c521, type: 2}
-    amount: 1
-  - prefab: {fileID: 1955149229709414, guid: f4987b64ae05ec94d81aac5dda0ad9b6, type: 2}
-    amount: 2
-  - prefab: {fileID: 1955149229709414, guid: 5ead727cfe670984cb167aee3679b582, type: 2}
-    amount: 3
-  - prefab: {fileID: 1955149229709414, guid: d272a492269b8414e90e6262a7a9c521, type: 2}
-    amount: 3
+  initiallyAvailableParts: []
   winCondition:
     targetArea: {fileID: 2051327100}
-    timeRequired: 3
+    timeRequired: 0
   gameManager: {fileID: 1772668149}
 --- !u!4 &329104484
 Transform:
@@ -675,12 +667,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e056b55d64bb348839654c5d521946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 26918856}
-  balloon: {fileID: 713721312}
-  pointTemplate: {fileID: 242932293}
-  lenght: 6
-  amountOfSegments: 12
-  lineRenderer: {fileID: 1727971107}
+  root: {fileID: 0}
+  balloon: {fileID: 0}
+  pointTemplate: {fileID: 0}
+  lenght: 0
+  amountOfSegments: 0
+  lineRenderer: {fileID: 0}
   points: []
 --- !u!50 &1727971110
 Rigidbody2D:

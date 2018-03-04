@@ -55,17 +55,17 @@ public class PartPreview : MonoBehaviour
         
 
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3 (0f, 0f, 10f);
-        
-        if (amountOfContacts > 0)
+
+        if (amountOfContacts == 0 || !GameManager.Instance.IsSimulating)
+        {
+            validPosition = true;
+            sr.color = previewColor;
+        }
+        else
         {
             validPosition = false;
             sr.color = invalidPositionColor;
             return;
-        }
-        else
-        {
-            validPosition = true;
-            sr.color = previewColor;
         }
 
         if (!hasSpawned && validPosition && Input.GetMouseButtonDown(0))

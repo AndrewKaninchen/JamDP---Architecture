@@ -34,6 +34,5 @@ public class Toolbar : MonoBehaviour
             Destroy(button);
         };
         instance.AddComponent<PartPreview>();
-        
     }
 }
