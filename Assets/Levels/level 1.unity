@@ -526,9 +526,9 @@ MonoBehaviour:
   partButtonPrefab: {fileID: 155996884}
   horizontalLayoutGroup: {fileID: 613374627}
   initiallyAvailablePartsPrefabs:
+  - {fileID: 1955149229709414, guid: ff72e152dd462e74497086cfd9830194, type: 2}
   - {fileID: 1955149229709414, guid: fb6099aac735dac48899dfad609b2b37, type: 2}
-  - {fileID: 1955149229709414, guid: fb6099aac735dac48899dfad609b2b37, type: 2}
-  - {fileID: 1955149229709414, guid: 5ead727cfe670984cb167aee3679b582, type: 2}
+  - {fileID: 1955149229709414, guid: ad79764820f805a49be27775880db139, type: 2}
   - {fileID: 1955149229709414, guid: bf6fbf11075c164499224115cdc7c9f7, type: 2}
   - {fileID: 1955149229709414, guid: f4987b64ae05ec94d81aac5dda0ad9b6, type: 2}
 --- !u!1 &924383156

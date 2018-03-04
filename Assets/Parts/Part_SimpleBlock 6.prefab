@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212252111575005880}
   - component: {fileID: 50517461379838280}
   - component: {fileID: 114938216191798784}
-  - component: {fileID: 60885333200668036}
+  - component: {fileID: 60593549995642664}
   m_Layer: 0
   m_Name: Part_SimpleBlock 6
   m_TagString: Untagged
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60885333200668036
+--- !u!60 &60593549995642664
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,11 +119,6 @@ PolygonCollider2D:
       - {x: -0.675, y: -1.9649999}
       - {x: -0.49499997, y: -1.8149999}
       - {x: -0.044999998, y: -1.405}
-    - - {x: -2.5149999, y: 1.9449999}
-      - {x: -2.485, y: 1.9549999}
-      - {x: -2.485, y: 1.985}
-      - {x: -2.5149999, y: 1.995}
-      - {x: -2.5349998, y: 1.9749999}
 --- !u!114 &114938216191798784
 MonoBehaviour:
   m_ObjectHideFlags: 1
