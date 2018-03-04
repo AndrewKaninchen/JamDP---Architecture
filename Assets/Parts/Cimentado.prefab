@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212252111575005880}
   - component: {fileID: 50517461379838280}
   - component: {fileID: 114938216191798784}
-  - component: {fileID: 60703812267815268}
+  - component: {fileID: 60915518271143166}
   m_Layer: 0
-  m_Name: Part_SimpleBlock 10
+  m_Name: Part_SimpleBlock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60703812267815268
+--- !u!60 &60915518271143166
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.07, y: 2.52}
+    oldSize: {x: 3.02, y: 2.68}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,10 +87,38 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.535, y: 1.26}
-      - {x: -1.535, y: -1.26}
-      - {x: 1.535, y: -1.26}
-      - {x: 1.535, y: 1.26}
+    - - {x: 0.42999998, y: -1.3}
+      - {x: 0.61, y: -1.3399999}
+      - {x: 1.02, y: -1.3399999}
+      - {x: 1.05, y: -1.3299999}
+      - {x: 1.4499999, y: -1.3199999}
+      - {x: 1.51, y: -1.29}
+      - {x: 1.51, y: 1.25}
+      - {x: 1.5, y: 1.27}
+      - {x: 1.4599999, y: 1.31}
+      - {x: 1.3199999, y: 1.3399999}
+      - {x: 1.0799999, y: 1.3399999}
+      - {x: 1.02, y: 1.31}
+      - {x: 0.78, y: 1.3399999}
+      - {x: -0.61, y: 1.3399999}
+      - {x: -0.71999997, y: 1.3199999}
+      - {x: -0.91999996, y: 1.31}
+      - {x: -1.4599999, y: 1.31}
+      - {x: -1.48, y: 1.26}
+      - {x: -1.51, y: 1.02}
+      - {x: -1.51, y: 0.21}
+      - {x: -1.49, y: 0.08}
+      - {x: -1.51, y: -0.22999999}
+      - {x: -1.51, y: -0.26999998}
+      - {x: -1.5, y: -0.55}
+      - {x: -1.51, y: -0.58}
+      - {x: -1.51, y: -1.3}
+      - {x: -1.48, y: -1.3199999}
+      - {x: -1.26, y: -1.3399999}
+      - {x: -0.35, y: -1.3399999}
+      - {x: 0.06, y: -1.3299999}
+      - {x: 0.089999996, y: -1.3399999}
+      - {x: 0.38, y: -1.3399999}
 --- !u!114 &114938216191798784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1955149229709414}
-  previewImage: {fileID: 21300000, guid: 13c044da22c59394882380666ca70543, type: 3}
+  previewImage: {fileID: 21300000, guid: e617e082f12c7db4b9562d6c09890526, type: 3}
 --- !u!212 &212252111575005880
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 13c044da22c59394882380666ca70543, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e617e082f12c7db4b9562d6c09890526, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

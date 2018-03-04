@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212252111575005880}
   - component: {fileID: 50517461379838280}
   - component: {fileID: 114938216191798784}
-  - component: {fileID: 60227134687207538}
+  - component: {fileID: 60113644541334752}
   m_Layer: 0
-  m_Name: Part_SimpleBlock 2
+  m_Name: Degraus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1955149229709414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.61, y: 2.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77, y: 0.77, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60227134687207538
+--- !u!60 &60113644541334752
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.52, y: 2.22}
+    oldSize: {x: 3.72, y: 3.29}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,10 +87,43 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3.26, y: 1.11}
-      - {x: -3.26, y: -1.11}
-      - {x: 3.26, y: -1.11}
-      - {x: 3.26, y: 1.11}
+    - - {x: 1.79, y: -1.645}
+      - {x: 1.8096005, y: -1.443801}
+      - {x: 1.8248004, y: -1.2225999}
+      - {x: 1.8072003, y: -1.0617983}
+      - {x: 1.8220004, y: -0.86779964}
+      - {x: 1.8448001, y: -0.675}
+      - {x: 1.6600021, y: -0.6701998}
+      - {x: 1.4176, y: -0.65819937}
+      - {x: 1.3768005, y: -0.355}
+      - {x: 1.4772003, y: -0.205}
+      - {x: 1.3616006, y: -0.19259979}
+      - {x: 0.93, y: -0.2133992}
+      - {x: 0.8872003, y: 0.11259994}
+      - {x: 0.9520004, y: 0.19740005}
+      - {x: 1, y: 0.235}
+      - {x: 0.8644006, y: 0.295}
+      - {x: 0.5268007, y: 0.31259978}
+      - {x: 0.5312012, y: 0.5710013}
+      - {x: 0.6131993, y: 0.7470004}
+      - {x: 0.04, y: 0.78499997}
+      - {x: 0.029600373, y: 1.0401999}
+      - {x: 0.089999996, y: 1.235}
+      - {x: -0.0383992, y: 1.2574002}
+      - {x: -0.53839916, y: 1.275}
+      - {x: -0.5379996, y: 1.5122002}
+      - {x: -0.47799957, y: 1.5873998}
+      - {x: -0.44240004, y: 1.645}
+      - {x: -1.7036014, y: 1.645}
+      - {x: -1.86, y: 1.645}
+      - {x: -1.86, y: 0.955}
+      - {x: -1.8575999, y: 0.955}
+      - {x: -1.86, y: 0.055}
+      - {x: -1.86, y: -1.5949999}
+      - {x: -1.8, y: -1.645}
+      - {x: 0.01, y: -1.645}
+      - {x: 1.1899999, y: -1.635}
+      - {x: 1.18, y: -1.645}
 --- !u!114 &114938216191798784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1955149229709414}
-  previewImage: {fileID: 21300000, guid: c3a2cceacbc8fee4a9741d7a39f07046, type: 3}
+  previewImage: {fileID: 21300000, guid: b9c539e3661cb4f499743d131b2d0cdd, type: 3}
 --- !u!212 &212252111575005880
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,7 +171,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3a2cceacbc8fee4a9741d7a39f07046, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9c539e3661cb4f499743d131b2d0cdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212252111575005880}
   - component: {fileID: 50517461379838280}
   - component: {fileID: 114938216191798784}
-  - component: {fileID: 60719681928152320}
+  - component: {fileID: 60865577852277844}
   m_Layer: 0
-  m_Name: Part_SimpleBlock 3
+  m_Name: Corredor longo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1955149229709414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.028782606, y: 0.4933406, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalPosition: {x: -1.61, y: 2.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60719681928152320
+--- !u!60 &60865577852277844
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,57 +79,18 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.81, y: 4.44}
-    newSize: {x: 5.81, y: 4.44}
+    oldSize: {x: 8.86, y: 1.7}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.8149998, y: -1.67}
-      - {x: 2.615, y: -1.42}
-      - {x: 2.5349998, y: -1.23}
-      - {x: 2.315, y: -0.88}
-      - {x: 2.075, y: -0.48999998}
-      - {x: 1.9549999, y: -0.29}
-      - {x: 1.735, y: 0.08}
-      - {x: 1.5749999, y: 0.34}
-      - {x: 1.475, y: 0.52}
-      - {x: 1.355, y: 0.71999997}
-      - {x: 1.225, y: 0.96}
-      - {x: 1.165, y: 1.05}
-      - {x: 1.0649999, y: 1.18}
-      - {x: 0.91499996, y: 1.48}
-      - {x: 0.85499996, y: 1.5899999}
-      - {x: 0.78499997, y: 1.7199999}
-      - {x: 0.645, y: 1.9599999}
-      - {x: 0.645, y: 2.22}
-      - {x: -2.905, y: 2.22}
-      - {x: -2.905, y: 1.92}
-      - {x: -2.8149998, y: 1.8199999}
-      - {x: -2.7549999, y: 1.6899999}
-      - {x: -2.685, y: 1.5699999}
-      - {x: -2.675, y: 1.48}
-      - {x: -2.595, y: 1.35}
-      - {x: -2.565, y: 1.27}
-      - {x: -2.5249999, y: 1.1899999}
-      - {x: -2.395, y: 0.96}
-      - {x: -2.335, y: 0.87}
-      - {x: -2.195, y: 0.59999996}
-      - {x: -2.155, y: 0.53999996}
-      - {x: -2.055, y: 0.38}
-      - {x: -1.8549999, y: 0.089999996}
-      - {x: -1.5949999, y: -0.29}
-      - {x: -1.4549999, y: -0.5}
-      - {x: -1.375, y: -0.61}
-      - {x: -0.91499996, y: -1.41}
-      - {x: -0.685, y: -1.78}
-      - {x: -0.675, y: -1.86}
-      - {x: -0.675, y: -2.22}
-      - {x: 2.905, y: -2.22}
-      - {x: 2.905, y: -1.8299999}
-      - {x: 2.885, y: -1.78}
+    - - {x: -4.43, y: 0.84999996}
+      - {x: -4.43, y: -0.84999996}
+      - {x: 4.43, y: -0.84999996}
+      - {x: 4.43, y: 0.84999996}
 --- !u!114 &114938216191798784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1955149229709414}
-  previewImage: {fileID: 21300000, guid: 489df14f4e1af8341ac702de9aaf905c, type: 3}
+  previewImage: {fileID: 21300000, guid: bc082898223da7942815152e1d971115, type: 3}
 --- !u!212 &212252111575005880
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -177,12 +138,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 489df14f4e1af8341ac702de9aaf905c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc082898223da7942815152e1d971115, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.81, y: 4.44}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
