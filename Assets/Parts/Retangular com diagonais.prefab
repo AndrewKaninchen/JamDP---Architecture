@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114938216191798784}
   - component: {fileID: 60176808344106020}
   m_Layer: 0
-  m_Name: Part_SimpleBlock 11
+  m_Name: Retangular com diagonais
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

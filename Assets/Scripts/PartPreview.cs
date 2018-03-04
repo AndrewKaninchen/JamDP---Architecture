@@ -17,6 +17,9 @@ public class PartPreview : MonoBehaviour
     private static Color invalidPositionColor = new Color(1f, 0f, 0f, .5f);
 
 
+    private float amountOfContacts;
+
+
     void Start ()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -28,13 +31,28 @@ public class PartPreview : MonoBehaviour
         sr.color = previewColor;
         if (rb) rb.isKinematic = true;
         foreach (var col in cols)
-            col.isTrigger = true; 
+            col.isTrigger = true;
+
+
+        gameObject.layer = LayerMask.NameToLayer("PreviewPart");
     }
 
 	void Update ()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3 (0f, 0f, 10f);
         
+        if (amountOfContacts > 0)
+        {
+            validPosition = false;
+            sr.color = invalidPositionColor;
+            return;
+        }
+        else
+        {
+            validPosition = true;
+            sr.color = previewColor;
+        }
+
         if (!hasSpawned && validPosition && Input.GetMouseButtonDown(0))
         {
             hasSpawned = true;
@@ -49,17 +67,16 @@ public class PartPreview : MonoBehaviour
         }
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        print(collision);
-        validPosition = false;
-        sr.color = invalidPositionColor;
+        if (other.gameObject.layer != LayerMask.NameToLayer("WinArea"))
+            amountOfContacts++;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        validPosition = true;
-        sr.color = previewColor;
+        if (other.gameObject.layer != LayerMask.NameToLayer("WinArea"))
+            amountOfContacts--;
     }
 
     private void OnDestroy()
@@ -68,5 +85,7 @@ public class PartPreview : MonoBehaviour
         if (rb) rb.isKinematic = false;
         foreach (var col in cols)
             col.isTrigger = false;
+
+        gameObject.layer = LayerMask.NameToLayer("Default");
     }
 }

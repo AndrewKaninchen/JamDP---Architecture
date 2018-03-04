@@ -28,7 +28,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            toggle.isOn = !toggle.isOn;
+            var selected = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+            if (selected == toggle.gameObject)
+                UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+            else
+                toggle.isOn = !toggle.isOn;
+            
         }
     }
 
@@ -43,5 +48,10 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void WinDeGueime()
+    {
+        Debug.Log("Boa porra");
     }
 }

@@ -33,5 +33,7 @@ public class LevelSettings : MonoBehaviour
                 gameManager.toolbar.AddPart(p.prefab);
             }
         }
+
+        winCondition.targetArea.Init(winCondition.timeRequired, gameManager);
     }
 }
