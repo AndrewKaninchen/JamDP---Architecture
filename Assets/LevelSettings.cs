@@ -64,7 +64,7 @@ public class LevelSettings : MonoBehaviour
         {
             foreach (WinArea area in winCondition.targetAreas)
             {
-                if (winCondition.targetArea.contactCount == 0)
+                if (area.contactCount == 0)
                 {
                     remainingTime = winCondition.timeRequired;
                     return;
