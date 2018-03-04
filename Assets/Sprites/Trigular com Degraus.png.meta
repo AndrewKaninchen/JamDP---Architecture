@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9c539e3661cb4f499743d131b2d0cdd
-timeCreated: 1520142509
+timeCreated: 1520145854
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -97,9 +97,9 @@ TextureImporter:
       - {x: -53.83992, y: 127.5}
       - {x: -53.799957, y: 151.22003}
       - {x: -47.799957, y: 158.73999}
-      - {x: -45, y: 164.5}
-      - {x: -169.60014, y: 162.98001}
-      - {x: -186, y: 161.73999}
+      - {x: -44.240005, y: 164.5}
+      - {x: -170.36014, y: 164.5}
+      - {x: -186, y: 164.5}
       - {x: -186, y: 95.5}
       - {x: -185.76, y: 95.5}
       - {x: -186, y: 5.5}
