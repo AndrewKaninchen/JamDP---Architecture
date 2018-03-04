@@ -42,6 +42,11 @@ public class PartPreview : MonoBehaviour
             part.Spawn();
             Destroy(this);
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
