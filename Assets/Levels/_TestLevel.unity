@@ -757,6 +757,11 @@ Prefab:
       propertyPath: toggle
       value: 
       objectReference: {fileID: 1645401853}
+    - target: {fileID: 114187609603181000, guid: a19fe4df7c012c04fba9c2bc946761c8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a19fe4df7c012c04fba9c2bc946761c8, type: 2}
   m_IsPrefabParent: 0

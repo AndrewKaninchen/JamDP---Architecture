@@ -39,6 +39,16 @@ public class PartPreview : MonoBehaviour
 
 	void Update ()
     {
+        amountOfContacts = 0;
+        foreach (var c in cols)
+        {
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.SetLayerMask(LayerMask.GetMask("Default"));
+            var res = new Collider2D[10];
+            amountOfContacts += c.OverlapCollider(filter, res);
+        }
+        
+
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3 (0f, 0f, 10f);
         
         if (amountOfContacts > 0)
@@ -66,18 +76,6 @@ public class PartPreview : MonoBehaviour
             transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
 	}
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer != LayerMask.NameToLayer("WinArea"))
-            amountOfContacts++;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.layer != LayerMask.NameToLayer("WinArea"))
-            amountOfContacts--;
-    }
 
     private void OnDestroy()
     {
