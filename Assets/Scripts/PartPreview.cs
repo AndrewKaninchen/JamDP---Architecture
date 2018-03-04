@@ -39,6 +39,11 @@ public class PartPreview : MonoBehaviour
 
 	void Update ()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+
         amountOfContacts = 0;
         foreach (var c in cols)
         {
@@ -69,11 +74,6 @@ public class PartPreview : MonoBehaviour
             part.enabled = true;
             part.Spawn();
             Destroy(this);
-        }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
 	}
 
