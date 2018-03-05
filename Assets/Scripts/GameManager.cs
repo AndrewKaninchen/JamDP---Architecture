@@ -6,16 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public System.Action OnToggleSimulating;
     public Canvas canvas;
     public GameObject boaPorra;
     public Toolbar toolbar;
     public GameObject world;
     public static GameManager Instance { get; private set; }
 
-    public Toggle toggle;
-
     private bool m_isSimulating;
     private bool hasWon = false;
+
+
 
     public bool IsSimulating 
     {
@@ -26,20 +27,14 @@ public class GameManager : MonoBehaviour
     public void ToggleSimulation()
     {
         IsSimulating = !IsSimulating;
+        OnToggleSimulating();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var selected = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-            if (selected == toggle.gameObject)
-                UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
-            else
-            {
-                ToggleSimulation();
-                toggle.isOn = IsSimulating;
-            }
+            ToggleSimulation();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
