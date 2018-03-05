@@ -42,6 +42,9 @@ public class LevelSettings : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.Instance.IsSimulating)
+            return;
+
         if (!winCondition.useMultipleTargetAreas)
         {
             if (winCondition.targetArea.contactCount > 0)
