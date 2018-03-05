@@ -232,7 +232,7 @@ MonoBehaviour:
   - prefab: {fileID: 1955149229709414, guid: 5cf419d907970734c8af21cecc1a5c33, type: 2}
     amount: 1
   winCondition:
-    targetArea: {fileID: 0}
+    targetArea: {fileID: 514159024}
     timeRequired: 3
     useMultipleTargetAreas: 0
     targetAreas: []
@@ -449,7 +449,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4425864677889206, guid: 2e310aff6dc7fd84ba9b13684b10cb81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -37.8
+      value: -31.24
       objectReference: {fileID: 0}
     - target: {fileID: 4425864677889206, guid: 2e310aff6dc7fd84ba9b13684b10cb81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -926,7 +926,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4425864677889206, guid: b7d764f4c5632e1418f1a4b43bb80671, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.6
+      value: -2.29
       objectReference: {fileID: 0}
     - target: {fileID: 4425864677889206, guid: b7d764f4c5632e1418f1a4b43bb80671, type: 2}
       propertyPath: m_LocalPosition.y
