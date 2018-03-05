@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
             Destroy(Instance);
         Instance = this;
         toolbar.world = world;
+        IsSimulating = true;
     }
 
     public void RestartLevel()
