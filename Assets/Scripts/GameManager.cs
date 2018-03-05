@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public Canvas canvas;
+    public GameObject boaPorra;
     public Toolbar toolbar;
     public GameObject world;
     public static GameManager Instance { get; private set; }
@@ -13,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Toggle toggle;
 
     private bool m_isSimulating;
+    private bool hasWon = false;
+
     public bool IsSimulating 
     {
         get { return m_isSimulating; }
@@ -52,6 +56,18 @@ public class GameManager : MonoBehaviour
 
     public void WinDeGueime()
     {
-        Debug.Log("Boa porra");
+        if (!hasWon)
+        {
+            var porra = Instantiate(boaPorra, canvas.transform);
+            porra.SetActive(true);
+            StartCoroutine(LoadMenu());
+            hasWon = true;
+        }
+    }
+
+    private IEnumerator LoadMenu ()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(0);
     }
 }
