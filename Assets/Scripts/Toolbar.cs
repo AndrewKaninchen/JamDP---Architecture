@@ -10,9 +10,15 @@ public class Toolbar : MonoBehaviour
 
     public GameObject partButtonPrefab;
     public HorizontalLayoutGroup horizontalLayoutGroup;
+    
+    private GameObject currentPreviewObject;
 
-    private void Start()
+    private void Update()
     {
+        if (currentPreviewObject != null && Input.GetMouseButtonDown(1))
+        {
+            Destroy(currentPreviewObject);
+        }
     }
 
     public void AddPart(GameObject partPrefab)
@@ -22,17 +28,21 @@ public class Toolbar : MonoBehaviour
         var partButtonController = buttonInstance.GetComponent<PartButtonController>();
         partButtonController.PrepareButton(partPrefab.GetComponent<Part>(), this);
     }
-    
-    public void PreviewPart (Part partPrefab, GameObject button)
+
+    public void PreviewPart(Part partPrefab, GameObject button)
     {
-        var instance = Instantiate(partPrefab.prefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity, world.transform);
-        var partInstance = instance.GetComponent<Part>();
-        partInstance.enabled = false;
-        partInstance.OnSpawn += () =>
+        if (currentPreviewObject == null)
         {
-            // Lidar com múltiplas instâncias do mesmo tipo
-            Destroy(button);
-        };
-        instance.AddComponent<PartPreview>();
+            currentPreviewObject = Instantiate(partPrefab.prefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity, world.transform);
+            var partInstance = currentPreviewObject.GetComponent<Part>();
+            partInstance.enabled = false;
+            partInstance.OnSpawn += () =>
+            {
+                // Lidar com múltiplas instâncias do mesmo tipo
+                Destroy(button);
+                currentPreviewObject = null;
+            };
+            currentPreviewObject.AddComponent<PartPreview>();
+        }
     }
 }

@@ -36,8 +36,15 @@ public class GameManager : MonoBehaviour
             if (selected == toggle.gameObject)
                 UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
             else
-                toggle.isOn = !toggle.isOn;
-            
+            {
+                ToggleSimulation();
+                toggle.isOn = IsSimulating;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel();
         }
     }
 
